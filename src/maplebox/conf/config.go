@@ -79,7 +79,7 @@ func appPath() (appPath string, err error) {
 	if _, file, _, ok := runtime.Caller(1); ok {
 		appPath, err = filepath.Abs(filepath.Dir(filepath.Join(file, ".."+string(filepath.Separator))))
 	} else {
-		err = errors.New("Get App Path ErrorTest")
+		err = errors.New("Get App Path Exception")
 	}
 	return
 }
